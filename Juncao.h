@@ -2,7 +2,6 @@
 
 #include "Vertice.h"
 
-
 class Juncao : public Vertice
 {
     public:

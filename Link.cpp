@@ -1,15 +1,36 @@
 #include "Link.h"
 
-Link::Link()
+Link::Link() : rugosidade(0.0) , comprimento(0.0) , declividade (0.0), v_inicio(nullptr), v_fim(nullptr)
 {
-    //ctor
+
 }
 
 Link::~Link()
 {
-    //dtor
+    delete v_inicio;
+    delete v_fim;
 }
 
+Link::Link(const Link& outro) : comprimento(outro.comprimento) , rugosidade(outro.rugosidade) , declividade(outro.declividade) {
+    this->v_inicio = new Vertice();
+    this->v_fim = new Vertice();
+}
+
+
+
+Link& Link::operator=(const Link& other)
+{
+     // Evita auto-atribuição
+    if (this != &other)
+    {
+        v_inicio = new Vertice();
+        v_fim = new Vertice();
+        this->comprimento = other.comprimento;
+        this->rugosidade = other.rugosidade;
+        this->declividade = other.declividade;
+    }
+    return *this;
+}
 
         void Link::setV_inicio(Vertice* v)
         {
@@ -68,20 +89,16 @@ Link::~Link()
             return this->declividade;
         }
 
-        double Link::getAreaMolhada()
-        {
-
-        }
-
-        double Link::getPerimetroMolhado()
-        {
-
-        }
-
         double Link::calcularCapacidadeVazao()
         {
             return 0.0;
         }
+
+double Link::getTempoPercurso()
+{
+    return getVelocidade()*getComprimento();
+}
+
 
 
 

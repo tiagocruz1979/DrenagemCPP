@@ -1,13 +1,40 @@
 #include "Contribuicao.h"
 
-Contribuicao::Contribuicao()
+Contribuicao::Contribuicao() : area(0.0) , runoff(0.0), tempoConcentracao(tcMin)
 {
-    //ctor
+    this->chuva = nullptr;
 }
 
 Contribuicao::~Contribuicao()
 {
-    //dtor
+    delete this->chuva;
+}
+
+// Construtor de cópia
+Contribuicao::Contribuicao(const Contribuicao& outro) {
+    this->area = outro.area;
+    this->runoff = outro.runoff;
+    this->tcMin = outro.tcMin;
+    this->tempoConcentracao = outro.tempoConcentracao;
+    this->chuva = new Chuva(*outro.chuva);
+    this->extensaoFluxoLaminar = outro.extensaoFluxoLaminar;
+    this->extensaoFluxoCanalRaso = outro.extensaoFluxoCanalRaso;
+}
+
+
+Contribuicao& Contribuicao::operator=(const Contribuicao& other)
+{
+     // Evita auto-atribuição
+    if (this != &other)
+    {
+        this->area = other.area;
+        this->runoff = other.runoff;
+        this->tcMin = other.tcMin;
+        this->extensaoFluxoLaminar = other.extensaoFluxoLaminar;
+        this->extensaoFluxoCanalRaso = other.extensaoFluxoCanalRaso;
+        this->chuva = other.chuva;
+    }
+    return *this;
 }
 
 

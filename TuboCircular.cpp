@@ -1,7 +1,7 @@
 #include "TuboCircular.h"
 
 
-TuboCircular::TuboCircular()
+TuboCircular::TuboCircular() : diametro(0.0) , alturaLamina(0.0)
 {
     //ctor
 }
@@ -11,7 +11,7 @@ TuboCircular::~TuboCircular()
     //dtor
 }
 
-TuboCircular::TuboCircular(const TuboCircular& other)
+TuboCircular::TuboCircular(const TuboCircular& other) : diametro(other.diametro) , alturaLamina(other.alturaLamina)
 {
     //copy ctor
 }
@@ -98,6 +98,6 @@ bool TuboCircular::vazaoSuficiente(double vazao)
 
 double TuboCircular::getTempoPercurso()
 {
-    return getVelocidade()*getComprimento();
+    return getVelocidade()*getComprimento()/60;
 }
 

@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include "cmath"
 #include "Vertice.h"
 #include "FormulasGerais.h"
@@ -9,15 +8,17 @@ class Link
     public:
         Link();
         virtual ~Link();
+        Link(const Link& outro);
+        Link& operator=(const Link& other);
 
         virtual double getAreaMolhada()=0;
         virtual double getPerimetroMolhado()=0;
         virtual double getAreaSecao()=0;
         virtual double getPerimetroSecao()=0;
-        virtual double getVelocidade()=0;
         virtual double getVazaoMaxima()=0;
         virtual bool vazaoSuficiente(double vazao)=0;
         virtual double getTempoPercurso()=0;
+        virtual double getVelocidade()=0;
 
 
         void setV_inicio(Vertice* v);
@@ -43,11 +44,11 @@ class Link
 
 
     private:
-        Vertice* v_inicio;
-        Vertice* v_fim;
-        double comprimento;
         double rugosidade;
+        double comprimento;
         double declividade;
 
+        Vertice *v_inicio;
+        Vertice *v_fim;
 
 };

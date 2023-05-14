@@ -1,5 +1,6 @@
 #pragma once
 #include "Link.h"
+#include "FormulasGerais.h"
 
 class TuboCircular : public Link
 {

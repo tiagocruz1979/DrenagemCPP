@@ -1,9 +1,7 @@
 #pragma once
 
-//#include "Contribuicao.h"
-//#include "TuboCircular.h"
-
-
+#include "Contribuicao.h"
+//#include "Link.h"
 
 
 class Vertice
@@ -23,7 +21,7 @@ class Vertice
         void setCoord(double X, double Y, double Z=0);
         void setVazaoEntrada(double v);
         double getVazaoEntrada();
-       // void setAreaContrib(Contribuicao &area);
+        void setAreaContrib(Contribuicao &area);
       //  void setLinkEntrada(Link &link);
 
     protected:
@@ -34,7 +32,7 @@ class Vertice
         double cotaTer;
         double vazaoEntrada;
        // Link *linkEntrada;
-      //  Contribuicao areaContrib;
+        Contribuicao *areaContrib;
 
         int id;
 };

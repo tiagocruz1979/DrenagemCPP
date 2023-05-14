@@ -7,7 +7,10 @@ class Contribuicao
 {
     public:
         Contribuicao();
+        Contribuicao(const Contribuicao& outro);
         virtual ~Contribuicao();
+        Contribuicao& operator=(const Contribuicao& other);
+
 
         void setArea(double area);
         double getArea();
@@ -30,9 +33,9 @@ class Contribuicao
         double runoff;
         double tcMin = 10;
         double tempoConcentracao=tcMin;
-        Chuva *chuva;
         double extensaoFluxoLaminar;
         double extensaoFluxoCanalRaso;
+        Chuva *chuva;
 
 
 };

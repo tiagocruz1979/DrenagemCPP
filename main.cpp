@@ -32,13 +32,13 @@ int main()
 
 
     //Criação de junção (poços de visita)
-    Vertice *v1 = new Vertice();
+    Juncao *v1 = new Juncao();
     v1->setCoord(100,100,0);
     v1->Setid(1);
     v1->setVazaoEntrada(area1.getVazao());
 
 
-    Vertice *v2 = new Vertice();
+    Juncao *v2 = new Juncao();
     v2->setCoord(200,15,0);
     v2->Setid(2);
 
@@ -48,7 +48,7 @@ int main()
     t1->setV_inicio(v1);
     t1->setV_fim(v2);
     t1->calcularComprimento();
-    t1->setDiametro(0.6);
+    t1->setDiametro(1.2);
     t1->setDeclividade(0.02);
     t1->setRugosidade(0.013);
     t1->setFracaoMaximaLamina(0.8);

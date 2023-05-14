@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Link.h"
-
+#include "FormulasGerais.h"
 
 class CanalRetangular : public Link
 {

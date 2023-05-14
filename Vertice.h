@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Contribuicao.h"
-#include "Link.h"
+//#include "Link.h"
 
 
 class Vertice

@@ -6,7 +6,8 @@
 #include "Contribuicao.h"
 #include "FormulasGerais.h"
 
-using namespace std;
+//using namespace std;
+
 
 int main()
 {

@@ -5,9 +5,8 @@
 1684024347 e:\projetocpp\drenagem2\captacao.h
 	"Vertice.h"
 
-1684041323 e:\projetocpp\drenagem2\vertice.h
+1684042563 e:\projetocpp\drenagem2\vertice.h
 	"Contribuicao.h"
-	"Link.h"
 
 1683599704 source:e:\projetocpp\drenagem2\juncao.cpp
 	"Juncao.h"
@@ -23,7 +22,7 @@
 	"Vertice.h"
 	"FormulasGerais.h"
 
-1684041032 source:e:\projetocpp\drenagem2\main.cpp
+1684042549 source:e:\projetocpp\drenagem2\main.cpp
 	<iostream>
 	"TuboCircular.h"
 	"CanalRetangular.h"

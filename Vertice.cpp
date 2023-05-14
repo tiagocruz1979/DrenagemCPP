@@ -1,5 +1,5 @@
 #include "Vertice.h"
-
+// teste commit
 Vertice::Vertice() : coordX(0.0) , coordY(0.0) , cotaTer(0.0) , vazaoEntrada(0.0), areaContrib(nullptr)
 {
     //ctor

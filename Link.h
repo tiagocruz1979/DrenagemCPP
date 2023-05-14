@@ -44,9 +44,9 @@ class Link
 
 
     private:
-        double rugosidade;
         double comprimento;
         double declividade;
+        double rugosidade;
 
         Vertice *v_inicio;
         Vertice *v_fim;

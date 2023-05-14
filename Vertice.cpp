@@ -1,15 +1,22 @@
 #include "Vertice.h"
-// teste commit
-Vertice::Vertice() : coordX(0.0) , coordY(0.0) , cotaTer(0.0) , vazaoEntrada(0.0), areaContrib(nullptr)
+
+Vertice::Vertice() : id(0) ,  coordY(0.0), coordX(0.0) , cotaTer(0.0) ,\
+                                vazaoEntrada(0.0) , areaContrib(nullptr)
 {
     //ctor
 }
 
+// Construtor de cópia
+Vertice::Vertice(const Vertice& outro) : id(0), coordY(outro.coordY), coordX(outro.coordX) , cotaTer(outro.cotaTer), \
+                    vazaoEntrada(outro.vazaoEntrada) , areaContrib(outro.areaContrib)
+{
 
+}
 
 Vertice::~Vertice() // Destrutor
 {
     delete this->areaContrib;
+
 }
 
 void Vertice::setCoord(double X, double Y, double Z)

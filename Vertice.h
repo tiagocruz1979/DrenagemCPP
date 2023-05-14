@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Contribuicao.h"
-//#include "Link.h"
+#include "Link.h"
 
 
 class Vertice
@@ -9,6 +9,9 @@ class Vertice
     public:
         Vertice();
         virtual ~Vertice();
+        Vertice(const Vertice& outro);
+        Vertice& operator=(const Vertice& other);
+
 
         double GetcoordX() { return coordX; }
         void SetcoordX(double val) { coordX = val; }
@@ -27,14 +30,14 @@ class Vertice
     protected:
 
     private:
-        double coordX;
+        int id;
         double coordY;
+        double coordX;
         double cotaTer;
         double vazaoEntrada;
        // Link *linkEntrada;
         Contribuicao *areaContrib;
 
-        int id;
 };
 
 

@@ -39,9 +39,8 @@ int main()
 
 
     Juncao *v2 = new Juncao();
-    v2->setCoord(200,15,0);
+    v2->setCoord(190,15,0);
     v2->Setid(2);
-
 
     //Criacao dos links , trecho entre junções
     TuboCircular *t1 = new TuboCircular();
